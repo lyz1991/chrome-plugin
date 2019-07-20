@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      margin: 0 auto;
+      width: 500px;
+      height: 400px;
+      padding: 30px;
+    }
+    .btn-groups {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 5px 10px;
+      border: none;
+      background-color: #e5e5e5;
+    }
+    textarea {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 200px;
+      resize: none;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="btn-groups">
+  <button id="etoc" class="btn">中文翻译</button>
+  <button id="ctoe" class="btn">英文翻译</button>
+  </div>
+  <textarea id="input"></textarea>
+  <p id="res"></p>
+</div>
+</body>
+<script src="./js/md5.js"></script>
+<script src="./js/transfer.js"></script>
+</html>

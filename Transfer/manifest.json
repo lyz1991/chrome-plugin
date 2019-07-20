@@ -1,0 +1,26 @@
+{
+	// 清单文件的版本，这个必须写，而且必须是2
+	"manifest_version": 2,
+	// 插件的名称
+	"name": "Transfer",
+	// 插件的版本
+	"version": "1.0.0",
+	// 插件描述
+	"description": "pageAction演示",
+	"browser_action": {
+		"default_icon": "img/transfer.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		 {
+            "matches": ["<all_urls>"],
+            "js": ["js/content-script.js"], "run_at": "document_start"
+        }
+	],
+	"devtools_page": "devtools.html",
+	"content_security_policy": "script-src https://fanyi-api.baidu.com 'self'; style-src 'unsafe-inline'; object-src 'self'",
+	"permissions": [
+		"declarativeContent"
+	]
+}
